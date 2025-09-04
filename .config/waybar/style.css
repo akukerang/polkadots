@@ -1,0 +1,108 @@
+@import url("themes/macchiato.css");
+
+* {
+	font-family: 'JetBrains Mono', 'Symbols Nerd Font Mono';
+	padding: 0;
+	margin: 0;
+}
+
+#waybar {
+	color: @text;
+	background-color: @crust;
+	font-size: 14px;
+}
+
+.modules-left {
+	margin-left: 4px;
+}
+
+.modules-right {
+	margin-right: 4px;
+}
+
+/************************/
+/*  SPECIALS            */
+/************************/
+
+#custom-now-playing {
+	padding: 0 10px;
+	font-size: 16px;
+
+}
+
+
+#custom-now-playing.playing {
+	color: @text;
+	/* yellow */
+}
+
+#custom-now-playing.paused {
+	color: @pink;
+	/* yellow */
+}
+
+#custom-power {
+	padding: 0 4px;
+	font-size: 16px;
+}
+
+#custom-power:hover {
+	color: @overlay2;
+}
+
+
+#custom-vpn {
+	border-bottom: 2px solid @mauve;
+	padding: 0px 8px;
+}
+
+
+/************************/
+/*  WORKSPACE BOTTONS   */
+/************************/
+
+#workspaces button {
+	padding: 0 4px;
+	border-radius: 0px;
+	transition: background-color 0.2s ease;
+	border-bottom: 2px solid @mantle;
+}
+
+#workspaces button.active {
+	border-bottom: 2px solid @blue;
+}
+
+
+#workspaces button.urgent {
+	border-bottom: 2px solid @red;
+}
+
+
+#memory,
+#cpu,
+#battery,
+#pulseaudio,
+#network {
+	padding: 0px 8px;
+	border-radius: 0px;
+}
+
+#pulseaudio {
+	border-bottom: 2px solid @yellow;
+}
+
+#network {
+	border-bottom: 2px solid @red;
+}
+
+#cpu {
+	border-bottom: 2px solid @green;
+}
+
+#memory {
+	border-bottom: 2px solid @sapphire;
+}
+
+#battery {
+	border-bottom: 2px solid @pink;
+}
