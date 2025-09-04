@@ -90,9 +90,9 @@
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "  ",
-    "format-ethernet": "   ",
-    "format-disconnected": " 󰖪  ",
+    "format-wifi": " ",
+    "format-ethernet": " ",
+    "format-disconnected": "󰖪 ",
     "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%",
     // "format-alt": "{ifname}: {ipaddr}/{cidr}",
     "on-click": "nm-connection-editor"
@@ -152,7 +152,7 @@
     "on-click": "~/.config/waybar/scripts/vpnToggle.sh",
     "on-right-click": "exec nordvpn-gui",
     // "on-right-click": "/usr/bin/nordvpn-gui",
-    "format": "󰌆 {}",
+    "format": "󰌆  {}",
     "markup": "pango",
     "tooltip": true,
     "tooltip-format": "VPN Status / Toggle"
