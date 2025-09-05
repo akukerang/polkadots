@@ -13,7 +13,7 @@
   "modules-right": [
     "pulseaudio",
     "network",
-    // "cpu",
+    "cpu",
     // "tray",
     "memory",
     "battery",
@@ -99,12 +99,10 @@
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{icon} {volume}% {format_source}",
-    "format-bluetooth": "{icon}  {volume}% {format_source}",
-    "format-bluetooth-muted": " {icon}  {format_source}",
-    "format-muted": "󰝟   {format_source}",
-    "format-source": "",
-    "format-source-muted": "",
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{icon}   {volume}%",
+    "format-bluetooth-muted": " {icon}   {volume}%",
+    "format-muted": "󰝟",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
@@ -119,7 +117,7 @@
   "battery": {
     "interval": 10,
     "states": {
-      // "good": 95,
+      "good": 95,
       "warning": 30,
       "critical": 15
     },
