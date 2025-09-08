@@ -1,7 +1,22 @@
 #!/bin/bash
-sleep 4
-killall xdg-desktop-portal-wlr
-killall xdg-desktop-portal
-/usr/lib/xdg-desktop-portal-wlr &
-sleep 4
-/usr/lib/xdg-desktop-portal &
+
+# Kill any old instances
+killall -q xdg-desktop-portal-hyprland
+killall -q xdg-desktop-portal
+
+# Small delay to avoid race conditions
+sleep 1
+
+# Start fresh instances (Fedora uses /usr/libexec/)
+# hyprland-specific portal first
+/usr/libexec/xdg-desktop-portal-hyprland &
+
+# then the generic portal
+
+
+# sleep 4
+# killall -e xdg-desktop-portal-hyprland
+# killall xdg-desktop-portal
+# /usr/libexec/xdg-desktop-portal-hyprland &
+# sleep 4
+# /usr/libexec/xdg-desktop-portal &
