@@ -102,13 +102,13 @@
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
     "format": "{icon}  {volume}%",
-    "format-bluetooth": "{icon}   {volume}%",
-    "format-bluetooth-muted": " {icon}   {volume}%",
+    "format-bluetooth": "{icon} 󰂯 {volume}%",
+    "format-bluetooth-muted": " {icon}  {volume}%",
     "format-muted": "󰝟",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
-      "headset": "",
+      "headset": "",
       "phone": "",
       "portable": "",
       "car": "",
