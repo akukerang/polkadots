@@ -1,0 +1,12 @@
+source /usr/share/cachyos-fish-config/cachyos-config.fish
+
+# overwrite greeting
+# potentially disabling fastfetch
+function fish_greeting
+   # smth smth
+end
+
+fish_add_path /home/gabe/.spicetify
+
+# alias ssh="kitty +kitten ssh"
+export "MICRO_TRUECOLOR=1"
