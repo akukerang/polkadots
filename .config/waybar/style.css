@@ -1,7 +1,7 @@
 @import url("themes/macchiato.css");
 
 * {
-	font-family: 'Symbols Nerd Font Mono', 'JetBrains Mono';
+	font-family: 'Symbols Nerd Font', 'JetBrainsMono Nerd Font Mono';
 	padding: 0;
 	margin: 0;
 }

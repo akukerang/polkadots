@@ -6,8 +6,8 @@
   "height": 30, // Waybar height (to be removed for auto height)
   "spacing": 8,
   "modules-left": [
-    "hyprland/workspaces",
-    "custom/vpn"
+    "hyprland/workspaces"
+    // "custom/vpn"
     // "custom/now-playing"
   ],
   "modules-center": ["clock"],
@@ -15,10 +15,10 @@
     "pulseaudio",
     "network",
     "cpu",
-    // "tray",
     "memory",
-    "battery",
+    // "battery",
     // "custom/power",
+    "tray",
     "custom/notification"
   ],
 
@@ -70,9 +70,9 @@
     }
   },
   "tray": {
-    "icon-size": 14
-    // "spacing": 10
-    // "ignore-list": ["nm-applet"]
+    "icon-size": 14,
+    "spacing": 10,
+    "ignore-list": ["nm-applet"],
   },
   "clock": {
     // "timezone": "America/New_York",
@@ -93,7 +93,7 @@
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": " ",
-    "format-ethernet": " ",
+    "format-ethernet": "󰈁",
     "format-disconnected": "󰖪 ",
     "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%",
     // "format-alt": "{ifname}: {ipaddr}/{cidr}",
