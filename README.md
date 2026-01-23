@@ -1,1 +1,3 @@
 # Dotfiles
+
+duckduckgo: akukerang727
