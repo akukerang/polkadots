@@ -8,5 +8,7 @@ end
 
 fish_add_path /home/gabe/.spicetify
 
-# alias ssh="kitty +kitten ssh"
-export "MICRO_TRUECOLOR=1"
+#alias ssh="kitty +kitten ssh"
+
+set MICRO_TRUECOLOR 1
+
