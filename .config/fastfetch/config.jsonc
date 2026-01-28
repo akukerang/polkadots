@@ -3,7 +3,7 @@
   "logo": {
     "source": "~/.config/fastfetch/images/pekora.jpg",
     "type": "kitty",
-    "height": 8,
+    "height": 11,
     "padding": {
       "top": 1,
       "left": 1
@@ -15,10 +15,19 @@
   "modules": [
     "break",
     {
+      "type": "title",
+      "color": {
+        "user": "34",
+        "at": "34",
+        "host": "34"
+      }
+    },
+    "break",
+    {
       "type": "os",
       "format": "{2}",
-      "key": " ",
-      "keyColor": "31" // = color1
+      "key": "󰣇 ",
+      "keyColor": "31"
     },
     {
       "type": "kernel",
@@ -26,39 +35,45 @@
       "keyColor": "31"
     },
     {
-      "type": "packages",
-      "format": "{} (dnf)",
-      "key": " ",
-      "keyColor": "32"
-    },
-    {
       "type": "uptime",
       "key": " ",
-      "keyColor": "32"
+      "keyColor": "31"
     },
     {
       "type": "terminal",
       "key": " ",
-      "keyColor": "33",
+      "keyColor": "32",
+      "format": "{1}"
+    },
+    {
+      "type": "shell",
+      "key": " ",
+      "keyColor": "32",
       "format": "{1}"
     },
     {
       "type": "wm",
       "key": " ",
-      "keyColor": "33",
+      "keyColor": "32",
       "format": "{1}"
     },
     {
       "type": "cpu",
       "key": " ",
-      "keyColor": "34",
+      "keyColor": "33",
       "format": "{1}"
+    },
+    {
+      "type": "gpu",
+      "key": " ",
+      "keyColor": "33",
+      "hideType": "integrated",
+      "format": "{vendor} {name}"
     },
     {
       "type": "memory",
       "key": " ",
-      "keyColor": "34"
-    },
-    "break"
+      "keyColor": "33"
+    }
   ]
 }

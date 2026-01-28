@@ -6,9 +6,7 @@ function fish_greeting
    # smth smth
 end
 
-fish_add_path /home/gabe/.spicetify
+set -gx MICRO_TRUECOLOR 1
 
-#alias ssh="kitty +kitten ssh"
-
-set MICRO_TRUECOLOR 1
-
+alias venv="source .venv/bin/activate.fish"
+alias fishrc="micro ~/.config/fish/config.fish"
