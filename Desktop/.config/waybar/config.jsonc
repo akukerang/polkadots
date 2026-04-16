@@ -6,8 +6,8 @@
   "height": 30, // Waybar height (to be removed for auto height)
   "spacing": 8,
   "modules-left": [
-    "hyprland/workspaces",
-    "custom/vpn"
+    "hyprland/workspaces"
+    // "custom/vpn"
     // "custom/now-playing"
   ],
   "modules-center": ["clock"],
@@ -72,7 +72,7 @@
   "tray": {
     "icon-size": 14,
     "spacing": 10,
-    "ignore-list": ["nm-applet"],
+    "ignore-list": ["nm-applet"]
   },
   "clock": {
     // "timezone": "America/New_York",
@@ -82,18 +82,18 @@
   },
   "cpu": {
     "interval": 10,
-    "format": "CPU {}%",
+    "format": "CPU {usage}%",
     "max-length": 10
   },
   "memory": {
     "interval": 30,
-    "format": "RAM {}%",
+    "format": "MEM {}%",
     "max-length": 10
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": " ",
-    "format-ethernet": "󰈁",
+    "format-ethernet": "",
     "format-disconnected": "󰖪 ",
     "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%",
     // "format-alt": "{ifname}: {ipaddr}/{cidr}",
@@ -150,8 +150,8 @@
     "exec": "~/.config/waybar/scripts/vpnStatus.sh",
     "interval": 5,
     "on-click": "~/.config/waybar/scripts/vpnToggle.sh",
-    "on-right-click": "exec nordvpn-gui",
-    // "on-right-click": "/usr/bin/nordvpn-gui",
+    // "on-right-click": "exec nordvpn-gui",
+    "on-right-click": "nordvpn-gui",
     "format": "󰌆  {}",
     "markup": "pango",
     "tooltip": true,

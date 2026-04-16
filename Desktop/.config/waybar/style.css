@@ -9,6 +9,7 @@
 #waybar {
 	color: @text;
 	background-color: @crust;
+	/* border-bottom: 2px solid @mantle; */
 	font-size: 14px;
 }
 
@@ -27,18 +28,14 @@
 #custom-now-playing {
 	padding: 0 10px;
 	font-size: 16px;
-
 }
-
 
 #custom-now-playing.playing {
 	color: @text;
-	/* yellow */
 }
 
 #custom-now-playing.paused {
 	color: @pink;
-	/* yellow */
 }
 
 #custom-power {
@@ -50,12 +47,11 @@
 	color: @overlay2;
 }
 
-
 #custom-vpn {
+	margin-bottom: 2px;
 	border-bottom: 2px solid @mauve;
 	padding: 0px 8px;
 }
-
 
 /************************/
 /*  WORKSPACE BOTTONS   */
@@ -66,13 +62,13 @@
 	padding: 0 4px;
 	border-radius: 0px;
 	transition: background-color 0.2s ease;
-	border-bottom: 2px solid @mantle;
+	border-bottom: 2px solid @base;
+	margin-bottom: 2px;
 }
 
 #workspaces button.active {
 	border-bottom: 2px solid @blue;
 }
-
 
 #workspaces button.urgent {
 	border-bottom: 2px solid @red;
@@ -84,6 +80,7 @@
 #battery,
 #pulseaudio,
 #network {
+	margin-bottom: 2px;
 	padding: 0px 8px;
 	border-radius: 0px;
 }
