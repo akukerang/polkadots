@@ -1,31 +1,43 @@
 #!/usr/bin/env fish
 
 echo "Installing pacman packages..."
+pacman -Syu --noconfirm
 pacman -S --needed --noconfirm \
-    hyprland hyprpaper hyprlock hypridle hyprpolkitagent \
-    kitty dolphin \
+    hyprland hyprpaper hyprlock \
+    hypridle hyprpolkitagent hyprshot \
+    kitty dolphin archlinux-xdg-menu \
     waybar wlogout swaync \
-    yay flatpak \
+    yay \
     networkmanager blueman \
-    github-cli fastfetch \
-    steam libreoffice-still bitwarden firefox discord \
+    github-cli fastfetch btop \
+    steam libreoffice-still firefox \
+    discord chromium bitwarden
 
 echo "Installing AUR packages..."
 yay -S --needed --aur --noconfirm \
     visual-studio-code-bin \
+    spotify \
+    spicetify-cli \
     hyprshade \
-    bitwarden \
     ttf-cascadia-code-nerd \
     ttf-cascadia-mono-nerd \
     ttf-nerd-fonts-symbols  \
     ttf-nerd-fonts-symbols-common  \
     ttf-jetbrains-mono-nerd  
 
-echo "Installing flatpak packages..."
-flatpak install -y com.spotify.Client
+# Spicetify
+sudo chmod a+wr /opt/spotify
+sudo chmod a+wr /opt/spotify/Apps -R
 
-# Copy dots into /home
+# Copying dotfiles
 echo "Copying dotfiles..."
 cp ~/polkadots/Desktop/.*  ~/
 
-echo "Setup complete. Reboot"
+xdg-settings set default-web-browser firefox.desktop
+
+echo "Setup complete. Todo:"
+echo "1. Reboot"
+echo "2. Open Spotify and login:"
+echo "  spicetify backup apply"
+echo "3. gh auth login"
+
