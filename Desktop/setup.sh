@@ -11,7 +11,8 @@ pacman -S --needed --noconfirm \
     networkmanager blueman \
     github-cli fastfetch btop \
     steam libreoffice-still firefox \
-    discord chromium bitwarden
+    discord chromium bitwarden \
+    qt6ct qt5ct kvantum nwg-look
 
 echo "Installing AUR packages..."
 yay -S --needed --aur --noconfirm \
