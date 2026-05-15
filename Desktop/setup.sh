@@ -3,10 +3,8 @@
 echo "Installing pacman packages..."
 pacman -Syu --noconfirm
 pacman -S --needed --noconfirm \
-    hyprland hyprpaper hyprlock \
-    hypridle hyprpolkitagent hyprshot \
+    hyprland hyprpolkitagent hyprshot \
     kitty dolphin archlinux-xdg-menu \
-    waybar wlogout swaync \
     yay \
     networkmanager blueman \
     github-cli fastfetch btop \
@@ -17,13 +15,12 @@ pacman -S --needed --noconfirm \
 echo "Installing AUR packages..."
 yay -S --needed --aur --noconfirm \
     visual-studio-code-bin \
-    spotify \
-    spicetify-cli \
-    hyprshade \
+    spotify spicetify-cli \
+    hyprshade noctalia-shell \
     ttf-cascadia-code-nerd \
     ttf-cascadia-mono-nerd \
-    ttf-nerd-fonts-symbols  \
-    ttf-nerd-fonts-symbols-common  \
+    ttf-nerd-fonts-symbols \
+    ttf-nerd-fonts-symbols-common \
     ttf-jetbrains-mono-nerd  
 
 # Spicetify
