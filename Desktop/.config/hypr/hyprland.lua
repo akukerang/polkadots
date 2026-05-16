@@ -58,7 +58,7 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
-hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 hl.env("XDG_MENU_PREFIX", "plasma-")
 
@@ -197,7 +197,7 @@ for i = 1, 10 do
 end
 hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "previous" }))
 
-hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
+hl.bind(mainMod .. " + SHIFT + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 hl.bind(mainMod .. " + EQUAL", hl.dsp.window.resize({ x = 20, y = 0, relative = true }))
 hl.bind(mainMod .. " + MINUS", hl.dsp.window.resize({ x = -20, y = 0, relative = true }))
