@@ -10,13 +10,13 @@ pacman -S --needed --noconfirm \
     github-cli fastfetch btop \
     steam libreoffice-still firefox \
     discord chromium bitwarden \
-    qt6ct qt5ct kvantum nwg-look
+    nwg-look
 
 echo "Installing AUR packages..."
 yay -S --needed --aur --noconfirm \
     visual-studio-code-bin \
-    spotify spicetify-cli \
-    hyprshade noctalia-shell \
+    spotify spicetify-cli python-pywalfox \
+    hyprshade noctalia-shell qt6ct-kde \
     ttf-cascadia-code-nerd \
     ttf-cascadia-mono-nerd \
     ttf-nerd-fonts-symbols \
