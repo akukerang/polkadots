@@ -45,6 +45,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd("qs -c noctalia-shell")
+    hl.exec_cmd("kbuildsycoca6")
     --   hl.exec_cmd("hyprshade on vibrance")
 end)
 
@@ -59,7 +60,7 @@ hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
-hl.env("XDG_MENU_PREFIX", "arch-")
+hl.env("XDG_MENU_PREFIX", "plasma-")
 
 -----------------------
 ----- PERMISSIONS -----
