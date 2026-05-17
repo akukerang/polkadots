@@ -611,6 +611,14 @@
             {
                 "enabled": true,
                 "id": "pywalfox"
+            },
+            {
+                "enabled": true,
+                "id": "qt"
+            },
+            {
+                "enabled": true,
+                "id": "code"
             }
         ],
         "enableUserTheming": false

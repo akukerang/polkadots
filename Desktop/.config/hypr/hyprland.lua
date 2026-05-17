@@ -53,14 +53,15 @@ end)
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
-hl.env("QT_QPA_PLATFORM", "wayland;xcb")
-hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
-hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
-hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
-hl.env("XDG_MENU_PREFIX", "plasma-")
+-- Uncomment this if not using uwsm
+-- hl.env("XCURSOR_SIZE", "24")
+-- hl.env("HYPRCURSOR_SIZE", "24")
+-- hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
+-- hl.env("QT_QPA_PLATFORM", "wayland;xcb")
+-- hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
+-- hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+-- hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+-- hl.env("XDG_MENU_PREFIX", "plasma-")
 
 -----------------------
 ----- PERMISSIONS -----
@@ -148,8 +149,8 @@ hl.config({
         kb_model       = "",
         kb_options     = "",
         kb_rules       = "",
-        scroll_method  = "on_button_down",
-        scroll_button  = 274,
+        -- scroll_method  = "on_button_down",
+        -- scroll_button  = 274,
         follow_mouse   = 2,
         sensitivity    = 0, -- -1.0 - 1.0, 0 means no modification.
         accel_profile  = "flat",
