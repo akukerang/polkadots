@@ -53,7 +53,6 @@ end)
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
--- Uncomment this if not using uwsm
 -- hl.env("XCURSOR_SIZE", "24")
 -- hl.env("HYPRCURSOR_SIZE", "24")
 -- hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
@@ -129,9 +128,10 @@ hl.config({
         fullscreen_on_one_column = true,
     },
     misc = {
-        force_default_wallpaper = 0,
-        disable_hyprland_logo   = false,
-        middle_click_paste      = false,
+        force_default_wallpaper  = -1,
+        disable_hyprland_logo    = true,
+        disable_splash_rendering = true,
+        middle_click_paste       = false,
     },
     cursor = {
         no_warps = true
