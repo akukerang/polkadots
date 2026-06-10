@@ -42,7 +42,7 @@
     "bar": {
         "autoHideDelay": 500,
         "autoShowDelay": 150,
-        "backgroundOpacity": 0.93,
+        "backgroundOpacity": 1,
         "barType": "simple",
         "capsuleColorKey": "none",
         "capsuleOpacity": 0.5,
@@ -291,6 +291,22 @@
         "gridSnap": false,
         "gridSnapScale": false,
         "monitorWidgets": [
+            {
+                "name": "HDMI-A-1",
+                "widgets": [
+                    {
+                        "diskPath": "/",
+                        "id": "SystemStat",
+                        "layout": "bottom",
+                        "roundedCorners": true,
+                        "scale": 1,
+                        "showBackground": true,
+                        "statType": "CPU",
+                        "x": 11,
+                        "y": 45
+                    }
+                ]
+            }
         ],
         "overviewEnabled": true
     },
@@ -461,7 +477,7 @@
         "backgroundOpacity": 1,
         "clearDismissed": true,
         "criticalUrgencyDuration": 10,
-        "density": "default",
+        "density": "compact",
         "enableBatteryToast": true,
         "enableKeyboardLayoutToast": true,
         "enableMarkdown": false,
@@ -470,6 +486,7 @@
         "location": "top_right",
         "lowUrgencyDuration": 2,
         "monitors": [
+            "HDMI-A-1"
         ],
         "normalUrgencyDuration": 4,
         "overlayLayer": true,
@@ -481,12 +498,12 @@
         },
         "sounds": {
             "criticalSoundFile": "",
-            "enabled": false,
-            "excludedApps": "discord,firefox,chrome,chromium,edge",
+            "enabled": true,
+            "excludedApps": "discord,firefox,chrome,chromium,edge,Element,hyprshot",
             "lowSoundFile": "",
             "normalSoundFile": "",
             "separateSounds": false,
-            "volume": 0.5
+            "volume": 0.2
         }
     },
     "osd": {
@@ -500,6 +517,7 @@
         ],
         "location": "top_right",
         "monitors": [
+            "HDMI-A-1"
         ],
         "overlayLayer": true
     },
@@ -603,14 +621,6 @@
             {
                 "enabled": true,
                 "id": "gtk"
-            },
-            {
-                "enabled": true,
-                "id": "kitty"
-            },
-            {
-                "enabled": true,
-                "id": "pywalfox"
             },
             {
                 "enabled": true,

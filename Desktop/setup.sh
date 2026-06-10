@@ -1,16 +1,21 @@
 #!/usr/bin/env fish
 
+if test (id -u) -eq 0
+    echo "This script should NOT be run as root. Please run as normal user."
+    exit 1
+end
+
 echo "Installing pacman packages..."
-pacman -Syu --noconfirm
-pacman -S --needed --noconfirm \
+sudo pacman -Syu --noconfirm
+sudo pacman -S --needed --noconfirm \
     hyprland hyprpolkitagent hyprshot \
     kitty dolphin archlinux-xdg-menu \
     yay \
     networkmanager blueman \
     github-cli fastfetch btop \
-    steam libreoffice-still firefox \
-    discord chromium bitwarden \
-    nwg-look
+    steam libreoffice-still helium-browser-bin \
+    discord zen-browser-bin bitwarden \
+    nwg-look rofi
 
 echo "Installing AUR packages..."
 yay -S --needed --aur --noconfirm \

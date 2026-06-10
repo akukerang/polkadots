@@ -32,7 +32,8 @@ hl.monitor({
 local terminal    = "kitty"
 local fileManager = "dolphin"
 local menu        = "rofi -show drun"
-local browser     = "firefox"
+local browser     = "zen-browser"
+local work        = "helium-browser"
 local code        = "code"
 
 -------------------
@@ -46,6 +47,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd("qs -c noctalia-shell")
     hl.exec_cmd("kbuildsycoca6")
+    hl.exec_cmd("gsettings set org.gnome.desktop.interface font-name 'JetBrainsMono Nerd Font 9'")
     --   hl.exec_cmd("hyprshade on vibrance")
 end)
 
@@ -178,11 +180,15 @@ local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(work))
+
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(code))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 
 hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle", mode = "maximized" }))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ action = "toggle", mode = "fullscreen" }))
+
 -- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
@@ -190,6 +196,12 @@ hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
+
+-- Move window with SUPER + SHIFT + arrow keys
+hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" }))
 
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
@@ -205,7 +217,7 @@ hl.bind(mainMod .. " + MINUS", hl.dsp.window.resize({ x = -20, y = 0, relative =
 hl.bind(mainMod .. " + SHIFT + EQUAL", hl.dsp.window.resize({ x = 0, y = 20, relative = true }))
 hl.bind(mainMod .. " + SHIFT + MINUS", hl.dsp.window.resize({ x = 0, y = -20, relative = true }))
 
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot --freeze -m region "))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot --freeze -m region -o ~/Pictures/Screenshots"))
 
 
 -- -- Laptop multimedia keys for volume and LCD brightness
