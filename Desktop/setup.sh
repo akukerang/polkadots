@@ -15,20 +15,20 @@ sudo pacman -S --needed --noconfirm \
     github-cli fastfetch btop \
     steam libreoffice-still helium-browser-bin \
     discord zen-browser-bin bitwarden \
-    nwg-look rofi
-
-echo "Installing AUR packages..."
-yay -S --needed --aur --noconfirm \
-    visual-studio-code-bin \
-    spotify spicetify-cli python-pywalfox \
-    hyprshade noctalia-shell qt6ct-kde \
-    ttf-cascadia-code-nerd \
+    nwg-look rofi noctalia-shell \
     ttf-cascadia-mono-nerd \
     ttf-nerd-fonts-symbols \
     ttf-nerd-fonts-symbols-common \
     ttf-jetbrains-mono-nerd  
 
+echo "Installing AUR packages..."
+yay -S --needed --aur --noconfirm \
+    visual-studio-code-bin \
+    spotify \
+    qt6ct-kde
+
 # Spicetify
+curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
 
