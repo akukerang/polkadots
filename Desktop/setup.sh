@@ -36,7 +36,8 @@ sudo chmod a+wr /opt/spotify/Apps -R
 echo "Copying dotfiles..."
 cp ~/polkadots/Desktop/.*  ~/
 
-xdg-settings set default-web-browser firefox.desktop
+xdg-settings set default-web-browser zen.desktop
+# xdg-settings set default-web-browser helium.desktop
 
 echo "Setup complete. Todo:"
 echo "1. Reboot"
