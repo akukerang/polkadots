@@ -21,3 +21,11 @@ hl.workspace_rule({ workspace = "6", monitor = "HDMI-A-1" })
 hl.workspace_rule({ workspace = "7", monitor = "DP-1" })
 hl.workspace_rule({ workspace = "8", monitor = "DP-1" })
 hl.workspace_rule({ workspace = "9", monitor = "DP-1" })
+
+hl.config({
+    input = {
+        sensitivity    = 0,
+        accel_profile  = "flat",
+        force_no_accel = true,
+    },
+})
