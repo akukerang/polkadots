@@ -125,6 +125,15 @@
                     "textColor": "none",
                     "useFixedWidth": false,
                     "visualizerType": "wave"
+                },
+                {
+                    "defaultSettings": {
+                        "connectedColor": "primary",
+                        "disconnectedColor": "none",
+                        "displayMode": "alwaysShow",
+                        "pollInterval": 5000
+                    },
+                    "id": "plugin:protonvpn"
                 }
             ],
             "right": [
@@ -457,7 +466,7 @@
         "bluetoothRssiPollIntervalMs": 60000,
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
-        "networkPanelView": "wifi",
+        "networkPanelView": "ethernet",
         "wifiDetailsViewMode": "grid"
     },
     "nightLight": {
@@ -632,9 +641,9 @@
     "ui": {
         "boxBorderEnabled": false,
         "fontDefault": "JetBrainsMono Nerd Font",
-        "fontDefaultScale": 0.9,
-        "fontFixed": "JetBrainsMono Nerd Font",
-        "fontFixedScale": 0.9,
+        "fontDefaultScale": 0.87,
+        "fontFixed": "monospace",
+        "fontFixedScale": 0.87,
         "panelBackgroundOpacity": 0.9,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": true,
